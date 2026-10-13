@@ -22,6 +22,8 @@
 #include "shaders.h"
 #include "ui.h"
 
+extern int Port_Setting(const char *name, int def);
+
 extern int Port_AspectMilli(void);
 
 /* ---- GL 3.3 core entry points (loaded through SDL_GL_GetProcAddress) ------------------------------ */
