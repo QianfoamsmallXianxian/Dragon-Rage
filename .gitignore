@@ -63,3 +63,12 @@ _stretch_*/
 _orient_*/
 _patch_*/
 _fs_final/
+
+_backup/
+_*_backup/
+_*_cleanup/
+_fs_*/
+_stretch_*/
+_orient_*/
+_patch_*/
+_fs_final/
