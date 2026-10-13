@@ -9,6 +9,7 @@ extern "C" {
 typedef struct PortVideo {
     int scale4;      /* internal resolution multiplier in quarters: 4 = 1x .. 32 = 8x */
     int aspectMilli; /* width / height of the picture * 1000 */
+    int stretch;
     int fullscreen;
     int fxOff;       /* bits: 1 outline, 2 see-through tint, 4 depth tint, 8 glare and glow, 16 distance blur */
     int glow;        /* percent */

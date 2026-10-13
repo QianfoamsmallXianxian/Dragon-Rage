@@ -1213,6 +1213,7 @@ void GsGpu_GetSettings(PortVideo *v) {
     v->scale4 = gsPendingScale4 ? gsPendingScale4 : gsScale4;
     v->aspectMilli = Port_AspectMilli();
     v->fullscreen = sFullscreen;
+    v->stretch = Port_Setting("stretch", 0);
     v->fxOff = (int)gsFxOff;
     v->glow = gsGlowPercent;
     v->filter = gsFilter;
@@ -1233,6 +1234,10 @@ void GsGpu_SetSettings(const PortVideo *v) {
     if (v->aspectMilli != now.aspectMilli) {
         Port_SetAspectMilli(v->aspectMilli);
         GsDraw_WindowShape();
+    }
+    if (v->stretch != now.stretch) {
+        Port_SettingSave("stretch", v->stretch);
+        Port_SettingsWrite();
     }
     if (v->fullscreen != now.fullscreen) {
         GsDraw_FullscreenSet(v->fullscreen);

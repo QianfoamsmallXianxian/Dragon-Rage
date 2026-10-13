@@ -565,8 +565,8 @@ static void video_tab(PortVideo &v) {
         ImGui::EndCombo();
     }
     ImGui::SetItemTooltip("Wider than 4:3 shows more of the fight to the sides. Menus are stretched.");
-    bool full = v.fullscreen != 0;
-    if (ImGui::Checkbox("Full screen", &full)) { v.fullscreen = full; }
+    bool full = v.stretch != 0;
+    if (ImGui::Checkbox("Full screen", &full)) { v.stretch = full; }
     ImGui::SameLine();
     ImGui::TextDisabled("(F11)");
     SDL_DisplayID *displays = SDL_GetDisplays(&count);
