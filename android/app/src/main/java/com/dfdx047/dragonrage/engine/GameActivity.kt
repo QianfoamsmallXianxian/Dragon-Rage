@@ -47,6 +47,10 @@ class GameActivity : SDLActivity() {
         }
     }
 
+    override fun setRequestedOrientation(orientation: Int) {
+        super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
         paths = GamePaths(this).also { it.ensure() }
@@ -81,6 +85,7 @@ class GameActivity : SDLActivity() {
 
     override fun onResume() {
         super.onResume()
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
         pad?.let { it.config = store.load() }
         handler.post(watchMenu)
     }
