@@ -731,20 +731,25 @@ static void show_target(SDL_GPUCommandBuffer *cmd, int best, SDL_GPUTexture *swa
     SDL_GPUBlitInfo bl;
     float want = (float)Port_AspectMilli() / 1000.0f;
     Uint32 w = sw, h = sh;
+    int stretch = Port_Setting("stretch", 0);
 
     SDL_zero(bl);
     bl.source.texture = sTgCol[best];
     bl.source.w = 512 * SCALE;
     bl.source.h = 448 * SCALE;
     bl.destination.texture = swap;
-    /* (The 512 x 448 buffer is not square-pixelled: it always fills a 4:3 or 16:9 screen.) */
-    if ((float)sw > (float)sh * want) {
-        w = (Uint32)((float)sh * want + 0.5f);
+    if (stretch) {
+        bl.destination.x = 0;
+        bl.destination.y = 0;
     } else {
-        h = (Uint32)((float)sw / want + 0.5f);
+        if ((float)sw > (float)sh * want) {
+            w = (Uint32)((float)sh * want + 0.5f);
+        } else {
+            h = (Uint32)((float)sw / want + 0.5f);
+        }
+        bl.destination.x = (sw - w) / 2;
+        bl.destination.y = (sh - h) / 2;
     }
-    bl.destination.x = (sw - w) / 2;
-    bl.destination.y = (sh - h) / 2;
     bl.destination.w = w;
     bl.destination.h = h;
     bl.clear_color.a = 1.0f;
