@@ -52,5 +52,5 @@ android/app/release/
 port/build/
 *.apk
 *.aab
-*.jks
-*.keystore
+# *.jks
+# *.keystore
