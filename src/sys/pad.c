@@ -139,10 +139,6 @@ void Pad_Update(void) {
                 pad->prev = btn;
                 pad->repeat = Pad_CalcRepeat(btn, pad->pressed, &pad->repeatTimer, &pad->repeatLast,
                                              pad->repeatDelay, pad->repeatInterval);
-                /* A pad without analog sticks is treated as not connected. */
-                if (Pad_IsDigitalOnly(i)) {
-                    Pad_Reset(i);
-                }
                 Pad_UpdateGameButtons(i);
                 break;
             }
