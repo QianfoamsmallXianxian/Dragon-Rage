@@ -760,7 +760,8 @@ static void frame_end(void) {
     int haveFu = 0;
 
     while (SDL_PollEvent(&ev)) {
-        if (ev.type == SDL_EVENT_WINDOW_FULLSCREEN ||
+        if (ev.type == SDL_EVENT_WINDOW_ENTER_FULLSCREEN ||
+            ev.type == SDL_EVENT_WINDOW_LEAVE_FULLSCREEN ||
             ev.type == SDL_EVENT_WINDOW_RESTORED ||
             ev.type == SDL_EVENT_WINDOW_FOCUS_GAINED) {
             GsDraw_FullscreenSync();

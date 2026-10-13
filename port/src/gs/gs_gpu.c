@@ -535,7 +535,8 @@ static int vk_init(void) {
 static void poll_events(void) {
     SDL_Event ev;
     while (SDL_PollEvent(&ev)) {
-        if (ev.type == SDL_EVENT_WINDOW_FULLSCREEN ||
+        if (ev.type == SDL_EVENT_WINDOW_ENTER_FULLSCREEN ||
+            ev.type == SDL_EVENT_WINDOW_LEAVE_FULLSCREEN ||
             ev.type == SDL_EVENT_WINDOW_RESTORED ||
             ev.type == SDL_EVENT_WINDOW_FOCUS_GAINED) {
             GsDraw_FullscreenSync();
