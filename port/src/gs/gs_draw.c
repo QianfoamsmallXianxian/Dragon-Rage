@@ -1202,7 +1202,9 @@ void GsDraw_FullscreenSync(void) {
 }
 
 void GsDraw_FullscreenToggle(void) {
-    GsDraw_FullscreenSet(!sFullscreen);
+    int v = Port_Setting("stretch", 0) ? 0 : 1;
+    Port_SettingSave("stretch", v);
+    Port_SettingsWrite();
 }
 
 /* ------------------------------------------------------------------------------------------- the settings window
