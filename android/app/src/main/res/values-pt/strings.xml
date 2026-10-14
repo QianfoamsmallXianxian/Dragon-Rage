@@ -120,6 +120,7 @@
     <string name="screen_filter">Filtro de tela</string>
     <string name="filter_bilinear">Bilinear</string>
     <string name="filter_sharp">Bilinear nítido</string>
+    <string name="filter_anime">Anime</string>
     <string name="screen_filter_hint">FXAA suaviza o serrilhado. FSR e Snapdragon GSR ampliam a imagem com bordas mais nítidas: rendem melhor com resolução interna abaixo da tela (1x a 2x), então também ajudam GPUs mais fracas.</string>
     <string name="aspect">Proporção da tela</string>
     <string name="show_fps">Mostrar FPS</string>

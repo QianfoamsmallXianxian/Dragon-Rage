@@ -85,7 +85,7 @@ fun SettingsScreen(vm: AppViewModel) {
             ChipRow(
                 options = listOf(
                     stringResource(R.string.filter_bilinear) to 0, stringResource(R.string.filter_sharp) to 1, "FXAA" to 2,
-                    "AMD FSR 1" to 3, "Snapdragon GSR" to 4,
+                    "AMD FSR 1" to 3, "Snapdragon GSR" to 4, stringResource(R.string.filter_anime) to 5,
                 ),
                 selected = get(EngineSettings.FILTER, 0),
                 onSelect = { vm.setting(EngineSettings.FILTER, it) },

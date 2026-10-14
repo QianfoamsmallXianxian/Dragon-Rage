@@ -121,7 +121,8 @@
     <string name="screen_filter">Screen filter</string>
     <string name="filter_bilinear">Bilinear</string>
     <string name="filter_sharp">Sharp bilinear</string>
-    <string name="screen_filter_hint">FXAA smooths jagged edges. FSR and Snapdragon GSR upscale with sharper edges: best with an internal resolution below the screen\'s (1x to 2x), so they also help weaker GPUs.</string>
+    <string name="filter_anime">Anime</string>
+    <string name="screen_filter_hint">FXAA smooths jagged edges. FSR and Snapdragon GSR upscale with sharper edges. Anime sharpens and saturates like a remastered release. Best with an internal resolution below the screen\'s (1x to 2x).</string>
     <string name="aspect">Aspect ratio</string>
     <string name="show_fps">Show FPS</string>
     <string name="show_fps_text">Frames-per-second counter while playing</string>
