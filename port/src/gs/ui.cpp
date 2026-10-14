@@ -780,6 +780,7 @@ static void touch_scroll(void) {
 }
 
 static void build(void) {
+    static bool sConfirmQuit = false;
     PortVideo v, was;
     ImGuiIO &io = ImGui::GetIO();
     bool open = true;
@@ -798,11 +799,37 @@ static void build(void) {
 #endif
     if (ImGui::Begin("Dragon Rage  -  paused###Settings", &open, flags)) {
 #ifdef __ANDROID__
-        if (ImGui::Button("  Resume  ")) {
+        if (ImGui::Button("  Resume  ", ImVec2(120.0f, 0.0f))) {
             open = false;
+            sConfirmQuit = false;
         }
         ImGui::SameLine();
-        ImGui::TextDisabled("Back button: resume");
+        if (!sConfirmQuit) {
+            ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.55f, 0.15f, 0.15f, 1.0f));
+            ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.70f, 0.20f, 0.20f, 1.0f));
+            ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.40f, 0.10f, 0.10f, 1.0f));
+            if (ImGui::Button("  Quit  ", ImVec2(100.0f, 0.0f))) {
+                sConfirmQuit = true;
+            }
+            ImGui::PopStyleColor(3);
+            ImGui::SameLine();
+            ImGui::TextDisabled("Back button: resume");
+        } else {
+            ImGui::TextUnformatted("Quit the game?");
+            ImGui::SameLine();
+            if (ImGui::Button("Yes, quit", ImVec2(110.0f, 0.0f))) {
+                Port_SettingsWrite();
+                SDL_Quit();
+                exit(0);
+            }
+            ImGui::SameLine();
+            if (ImGui::Button("Cancel", ImVec2(80.0f, 0.0f))) {
+                sConfirmQuit = false;
+            }
+            if (ImGui::IsKeyPressed(ImGuiKey_Escape)) {
+                sConfirmQuit = false;
+            }
+        }
         ImGui::Separator();
 #endif
         if (ImGui::BeginTabBar("tabs")) {
