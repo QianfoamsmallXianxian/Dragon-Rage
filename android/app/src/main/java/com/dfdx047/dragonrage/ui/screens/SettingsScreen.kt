@@ -130,7 +130,6 @@ fun SettingsScreen(vm: AppViewModel) {
         }
 
         SectionCard(stringResource(R.string.performance), Icons.Rounded.Speed, accent = MaterialTheme.colorScheme.secondary) {
-            }
         }
 
         GpuDriverCard(vm)
