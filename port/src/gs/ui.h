@@ -17,7 +17,7 @@ typedef struct PortVideo {
     int display;     /* 0 = the desktop chooses, n = the n-th display; used at the next start */
     int texPack;     /* 1 = the texture pack's replacements are used */
     int texPackCount; /* read only: replacement textures found in the textures folder */
-    int filter;      /* the picture onto the screen: 0 bilinear, 1 sharp bilinear, 2 FXAA, 3 FSR 1, 4 Snapdragon GSR */
+    int filter;      /* 0 bilinear, 1 sharp bilinear, 2 FXAA, 3 FSR 1, 4 Snapdragon GSR, 5 Anime */
 } PortVideo;
 
 /* gs_draw.c */
