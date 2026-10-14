@@ -130,7 +130,9 @@ fun SettingsScreen(vm: AppViewModel) {
         }
 
         SectionCard(stringResource(R.string.performance), Icons.Rounded.Speed, accent = MaterialTheme.colorScheme.secondary) {
-            ToggleRow(stringResource(R.string.fps60), stringResource(R.string.fps60_text), false, enabled = false) {}
+            ToggleRow(stringResource(R.string.fps60), stringResource(R.string.fps60_text), get(EngineSettings.FPS60, 0) != 0) {
+                vm.setting(EngineSettings.FPS60, if (it) 1 else 0)
+            }
         }
 
         GpuDriverCard(vm)

@@ -149,7 +149,7 @@
     <string name="opacity">Opacity</string>
     <string name="performance">Performance</string>
     <string name="fps60">60 FPS mode</string>
-    <string name="fps60_text">Coming later: the game runs its logic at 30 frames per second</string>
+    <string name="fps60_text">A fight at 60 frames per second instead of 30. The match plays twice as fast as on the console</string>
     <string name="appearance">App appearance</string>
     <string name="theme">Theme</string>
     <string name="theme_dark">Dark</string>
