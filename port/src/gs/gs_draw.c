@@ -1332,7 +1332,7 @@ int GsGpu_Init(void) {
     gsFxOff = (unsigned)(getenv("BT3_FX_OFF") != NULL ? atoi(getenv("BT3_FX_OFF")) : Port_Setting("fx_off", 0)) & 31;
     gsGlowPercent = getenv("BT3_GLOW") != NULL ? atoi(getenv("BT3_GLOW")) : Port_Setting("glow", GLOW_DEFAULT);
     gsFilter = getenv("BT3_FILTER") != NULL ? atoi(getenv("BT3_FILTER")) : Port_Setting("filter", 0);
-    gsFilter = gsFilter < 0 || gsFilter > 4 ? 0 : gsFilter;
+    gsFilter = gsFilter < 0 || gsFilter > 5 ? 0 : gsFilter;
     sTexPackOn = Port_Setting("texture_pack", 1) != 0;
     gPortMusicPercent = Port_Setting("music", 100);
     gPortSePercent = Port_Setting("effects", 100);
