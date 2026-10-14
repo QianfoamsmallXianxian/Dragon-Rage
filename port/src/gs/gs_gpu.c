@@ -721,7 +721,7 @@ static int show_filtered(SDL_GPUCommandBuffer *cmd, int best, SDL_GPUTexture *sw
     {   /* bilinear, sharp bilinear, FXAA (and FSR or GSR if their pipelines could not be made) */
         struct { float tex[4], region[4]; int32_t mode[4]; } u = {
             {1.0f / texW, 1.0f / texH, texW, texH}, {inW / texW, inH / texH, (float)w / inW, (float)h / inH},
-            {gsFilter == 1 || gsFilter == 2 ? gsFilter : 0, 0, 0, 0}};
+            {gsFilter == 1 || gsFilter == 2 || gsFilter == 5 ? gsFilter : 0, 0, 0, 0}};
         filter_pass(cmd, swap, sPresentPipe, sTgCol[best], lin, &u, sizeof(u), (float)dx, (float)dy, (float)w, (float)h, 1);
         return 1;
     }

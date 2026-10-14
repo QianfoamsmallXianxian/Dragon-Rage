@@ -1246,7 +1246,7 @@ void GsGpu_SetSettings(const PortVideo *v) {
     }
     gsFxOff = (unsigned)v->fxOff & 31;
     gsGlowPercent = v->glow;
-    gsFilter = v->filter < 0 || v->filter > 4 ? 0 : v->filter;
+    gsFilter = v->filter < 0 || v->filter > 5 ? 0 : v->filter;
     gPortSePercent = v->effects;
     if (v->music != now.music) {
         gPortMusicPercent = v->music;
