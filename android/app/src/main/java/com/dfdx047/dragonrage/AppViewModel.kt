@@ -255,7 +255,6 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
 
     // (after the state above: properties are set up in order, and this reads _update)
     init {
-        checkForUpdate(manual = false)
     }
 
     /** Looks for a newer version. At start it only speaks up when there is one; from About it also says "up to date". */
