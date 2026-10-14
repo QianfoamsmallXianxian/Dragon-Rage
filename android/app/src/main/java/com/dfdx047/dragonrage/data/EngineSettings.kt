@@ -66,7 +66,6 @@ class EngineSettings(private val file: File) {
 
         // Dragon Rage's own, read by the Android glue of the engine at start
         const val UNLOCK_ALL = "dr_unlock_all"    // 1: run Save_UnlockAll once on the next start, then 0
-        const val FPS60 = "dr_fps60"              // reserved for the 60 fps mode
         const val TOUCH = "dr_touch"              // on-screen controls: 0 off, 1 automatic, 2 always
         const val TOUCH_OPACITY = "dr_touch_alpha" // 10..100 %
 

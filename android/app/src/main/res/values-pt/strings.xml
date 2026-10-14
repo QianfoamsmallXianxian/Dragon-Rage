@@ -147,8 +147,6 @@
     <string name="touch_hint">Automático: somem assim que um controle físico é usado (o do Odin, um controle Bluetooth) e voltam quando você toca na tela.</string>
     <string name="opacity">Opacidade</string>
     <string name="performance">Desempenho</string>
-    <string name="fps60">Modo 60 FPS</string>
-    <string name="fps60_text">Em breve: o jogo roda a lógica a 30 quadros por segundo</string>
     <string name="appearance">Aparência do app</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Escuro</string>

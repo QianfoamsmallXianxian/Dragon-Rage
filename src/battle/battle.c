@@ -52,7 +52,6 @@ extern s32 gBattleProf[];  /* argument of the stripped profiler stubs */
 
 extern void Gfx_BeginFrame(void);
 extern void Gfx_EndFrame(s32 vsyncs);
-extern int Port_Setting(const char *name, int def);
 extern void Snd_Update(void);
 extern void Fade_Start(s32 idx, s32 dir, f32 seconds);
 extern void Fade_ResetAll(void);
@@ -356,7 +355,7 @@ void Battle_Loop(void) {
         } else {
             Battle_Draw();
         }
-        Gfx_EndFrame(Port_Setting("dr_fps60", 0) ? 1 : 2);
+        Gfx_EndFrame(2);
         Dma_Flush();
     } while (!done);
 }
