@@ -147,7 +147,6 @@
     <string name="touch_always">Always</string>
     <string name="touch_hint">Automatic: they hide as soon as a physical controller is used (the Odin\'s own, a Bluetooth pad) and come back when you touch the screen.</string>
     <string name="opacity">Opacity</string>
-    <string name="performance">Performance</string>
     <string name="appearance">App appearance</string>
     <string name="theme">Theme</string>
     <string name="theme_dark">Dark</string>

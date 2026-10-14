@@ -546,7 +546,7 @@ static void video_tab(PortVideo &v) {
     }
     ImGui::SetItemTooltip("How finely the game is drawn. 1x is the PlayStation 2's own resolution.\nHigher is sharper and uses more video memory.");
     {
-        static const char *filters[] = {"Bilinear", "Sharp bilinear", "FXAA (smooths jagged edges)", "AMD FSR 1", "Snapdragon GSR"};
+        static const char *filters[] = {"Bilinear", "Sharp bilinear", "FXAA (smooths jagged edges)", "AMD FSR 1", "Snapdragon GSR", "Anime"};
         int f = v.filter < 0 || v.filter > 4 ? 0 : v.filter;
         if (ImGui::BeginCombo("Screen filter", filters[f])) {
             for (int n = 0; n < 5; n++) {

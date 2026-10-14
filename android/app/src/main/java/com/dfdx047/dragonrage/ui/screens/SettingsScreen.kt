@@ -129,9 +129,6 @@ fun SettingsScreen(vm: AppViewModel) {
             StepSlider(stringResource(R.string.sfx), { "${it * 10}%" }, fx / 10, 0..20) { vm.setting(EngineSettings.EFFECTS, it * 10) }
         }
 
-        SectionCard(stringResource(R.string.performance), Icons.Rounded.Speed, accent = MaterialTheme.colorScheme.secondary) {
-        }
-
         GpuDriverCard(vm)
         LogCard(vm)
 

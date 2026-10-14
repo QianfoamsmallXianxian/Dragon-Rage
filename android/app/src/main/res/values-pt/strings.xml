@@ -146,7 +146,6 @@
     <string name="touch_always">Sempre</string>
     <string name="touch_hint">Automático: somem assim que um controle físico é usado (o do Odin, um controle Bluetooth) e voltam quando você toca na tela.</string>
     <string name="opacity">Opacidade</string>
-    <string name="performance">Desempenho</string>
     <string name="appearance">Aparência do app</string>
     <string name="theme">Tema</string>
     <string name="theme_dark">Escuro</string>
